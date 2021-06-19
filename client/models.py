@@ -2,7 +2,8 @@ from django.db import models
 
 
 def client_upload_to(instance, filename):
-    return 'static/media/client/{filename}'.format(filename=filename)
+    ext = filename.split('.')[-1]
+    return 'client/{name}_{number}.{ext}'.format(name=instance.name, number=instance.mobile_number, ext=ext)
 
 
 class Client(models.Model):

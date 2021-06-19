@@ -145,6 +145,11 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = "static_root"
 
+# Media
+MEDIA_URL = '/media/'
+MEDIAFILES_DIR = [BASE_DIR / "media"]
+MEDIA_ROOT = "media_root"
+
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

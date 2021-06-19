@@ -139,4 +139,4 @@ cython_debug/
 
 # others
 .idea
-static/media/
+media_root/

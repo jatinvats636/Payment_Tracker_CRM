@@ -2,7 +2,8 @@ from django.db import models
 
 
 def employee_upload_to(instance, filename):
-    return 'static/media/employee/{filename}'.format(filename=filename)
+    ext = filename.split('.')[-1]
+    return 'employee/{name}_{number}.{ext}'.format(name=instance.name, number=instance.mobile_number, ext=ext)
 
 
 class Employee(models.Model):
