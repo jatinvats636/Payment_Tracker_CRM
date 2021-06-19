@@ -1,5 +1,5 @@
 from django.urls import path
-from authentication.views import RegisterUserView
+from .views import RegisterUserView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
