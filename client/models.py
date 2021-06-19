@@ -9,7 +9,7 @@ class Client(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     mobile_number = models.CharField(max_length=12)
-    # image field upload_to path is not properly set, please ensure it before starting to upload pics
+    # Profile Pic
     image = models.ImageField(upload_to=client_upload_to, blank=True)
     # Account Details
     account_holder_name = models.CharField(max_length=200)
