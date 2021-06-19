@@ -24,6 +24,6 @@ class UserSerializer(serializers.Serializer):
             raise serializers.ValidationError(
                 {'username': ('Username is already in use')})
         return super().validate(data)
-
+      
     def create(self, validated_data):
         return User.objects.create_user(**validated_data)
