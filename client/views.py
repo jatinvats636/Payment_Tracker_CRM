@@ -1,4 +1,3 @@
-from django.contrib.admin.utils import lookup_field
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.filters import SearchFilter
