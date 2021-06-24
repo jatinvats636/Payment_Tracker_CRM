@@ -33,3 +33,15 @@ class ClientAddress(models.Model):
 
     def __str__(self):
         return f"{self.owner.id} {self.street_address} {self.postal_pin_code}"
+
+class ClientService(models.Model):
+    owner = models.ForeignKey(to=Client, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    # rate field: verify if this field is char or int
+    rate = models.DecimalField(max_digits=19, decimal_places=10)
+    poc = models.CharField(max_length=20)
+    other = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.client} {self.title}"

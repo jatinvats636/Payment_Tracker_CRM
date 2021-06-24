@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Client, ClientAddress
+from .models import Client, ClientAddress,ClientService
 
 
 class ClientSerializer(serializers.ModelSerializer):
@@ -13,3 +13,8 @@ class ClientAddressSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClientAddress
         fields = ['id', 'street_address', 'city', 'state', 'postal_pin_code']
+
+class ClientServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ClientService
+        fields = ['id', 'title', 'rate', 'other']

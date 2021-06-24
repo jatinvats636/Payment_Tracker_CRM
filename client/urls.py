@@ -1,5 +1,10 @@
 from django.urls import path
-from .views import ClientListCreateView, ClientRetrieveUpdateView, ClientAddressListCreateView, ClientAddressRetrieveUpdateDestroyView
+from .views import(ClientListCreateView,
+                   ClientRetrieveUpdateView,
+                   ClientAddressListCreateView,
+                   ClientAddressRetrieveUpdateDestroyView,
+                   ClientServiceListCreateView,
+                   ClientServiceRetrieveUpdateDestroyView)
 
 
 urlpatterns = [
@@ -9,4 +14,8 @@ urlpatterns = [
          name='client-address-list/'),
     path('address/<int:id>/', ClientAddressRetrieveUpdateDestroyView.as_view(),
          name='client-address-list-operations'),
+    path('<int:id>/sevice/', ClientServiceListCreateView.as_view(),
+         name='client-service-list/'),
+    path('service/<int:id>/', ClientServiceRetrieveUpdateDestroyView.as_view(),
+         name='client-service-list-operations'),
 ]
