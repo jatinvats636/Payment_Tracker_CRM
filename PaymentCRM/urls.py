@@ -29,6 +29,7 @@ urlpatterns = [
     path('api/auth/', include('authentication.urls')),
     path('api/client/', include('client.urls')),
     path('api/employee/', include('employee.urls')),
+    path('api/account/', include('account.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
