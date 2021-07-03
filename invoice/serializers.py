@@ -12,5 +12,5 @@ class InvoiceSerializer(serializers.ModelSerializer):
 
 class InvoiceServiceSerializer(serializers.ModelSerializer):
     class Meta:
-        models = InvoiceService
+        model = InvoiceService
         fields = ['id', 'client', 'service', 'count', 'total']
