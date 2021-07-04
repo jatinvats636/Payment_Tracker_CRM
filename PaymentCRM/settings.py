@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'client',
     'employee',
     'account',
-    'invoice'
+    'invoice',
+    'credit_notes',
 ]
 
 MIDDLEWARE = [
