@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     # local apps
     'authentication',
     'client',
-    'employee'
+    'employee',
+    'account',
+    'invoice'
 ]
 
 MIDDLEWARE = [
