@@ -8,3 +8,4 @@ class CustomSessionModel(models.Model):
     login_time=models.DateTimeField(null=True)
     logout_time=models.DateTimeField(null=True)
     is_active=models.BooleanField(default=True)
+

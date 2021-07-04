@@ -31,6 +31,7 @@ urlpatterns = [
     path('api/employee/', include('employee.urls')),
     path('api/account/', include('account.urls')),
     path('api/invoice/', include('invoice.urls')),
+    path('api/credit_notes/',include('credit_notes.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
