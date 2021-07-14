@@ -13,8 +13,12 @@ class Employee(models.Model):
     mobile_number = models.CharField(max_length=12)
     address = models.CharField(max_length=500)
     salary = models.CharField(max_length=20)
+    incentives = models.CharField(max_length=20)
+    other = models.CharField(max_length=100)
     joining_date = models.DateField()
+    payment_date = models.DateField()
     description = models.CharField(max_length=100)
+    status = models.CharField(max_length=30)
     # Account details
     account_holder_name = models.CharField(max_length=200)
     account_number = models.CharField(max_length=50)
