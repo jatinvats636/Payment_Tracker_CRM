@@ -11,20 +11,20 @@ class ClientListCreateView(ListCreateAPIView):
     serializer_class = ClientSerializer
     filter_backends = [SearchFilter]
     search_fields = ['^name']
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
 class ClientRetrieveUpdateView(RetrieveUpdateAPIView):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     lookup_field = "id"
 
 
 class ClientAddressListCreateView(ListCreateAPIView):
     queryset = ClientAddress.objects.all()
     serializer_class = ClientAddressSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     lookup_field = "id"
 
     def perform_create(self, serializer):

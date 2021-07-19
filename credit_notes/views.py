@@ -7,11 +7,11 @@ from .serializers import CreditNotesSerializer
 class CreditNotesListCreateView(ListCreateAPIView):
     queryset = CreditNotes.objects.all()
     serializer_class = CreditNotesSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
 class CreditNotesRetrieveUpdateView(RetrieveUpdateAPIView):
     queryset = CreditNotes.objects.all()
     serializer_class = CreditNotesSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     lookup_field = "id"

@@ -11,11 +11,11 @@ class EmployeeListCreateView(ListCreateAPIView):
     serializer_class = EmployeeSerializer
     filter_backends = [SearchFilter]
     search_fields = ['^name']
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
 class EmployeeRetrieveUpdateView(RetrieveUpdateAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
     lookup_field = "id"
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
